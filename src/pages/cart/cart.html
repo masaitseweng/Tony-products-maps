@@ -1,0 +1,70 @@
+
+<ion-header>
+
+  <ion-navbar color="fourtwenty">
+    <ion-title>My Cart</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="login-content">
+
+
+    <ion-list>
+        <ion-item-divider text-center color="fourtwentylight">
+          Items In My Cart
+        </ion-item-divider>
+        <ion-item-divider color="light" [hidden]="!showEmptyCartMessage">
+          <small>There are no products in your cart.</small>
+        </ion-item-divider>
+    
+        <ion-card color="fourtwenty" *ngFor="let item of productitems; let i = index">
+          <ion-item color="fourtwenty" >
+    
+            <ion-thumbnail item-right>
+              <img [src]="base_url+item.imageUrl" />
+            </ion-thumbnail>
+            
+            <h2>{{ item.title }}</h2>
+
+
+            <p ><span  >{{item.number_of_items }}&nbsp;</span></p>
+          </ion-item>
+
+          <ion-item class="compact">
+            <ion-row no-padding>
+              <ion-col col-8 no-padding>
+                <button clear color="danger" ion-button icon-only (click)="changeRemove(item)">
+                  <ion-icon name="remove-circle"></ion-icon>
+                </button>
+                <button ion-button color="dark" clear>{{item.quantity}}</button>
+                <button clear color="danger" ion-button icon-only (click)="changeadd(item)">
+                  <ion-icon name="add-circle"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col col-4 style="text-align: right;">
+                <button ion-button small outline (click)="removeFromCart(item)" style="width: 64px;" color="danger">Remove</button>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-card>
+      </ion-list>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="fourtwenty">
+  
+      <ion-row no-padding >
+        <ion-col no-padding>
+          <button style="color:#ffffff;" ion-button  block clear>TOTAL {{ currency_symbol }} {{ total | number}}</button>
+        </ion-col>
+        <ion-col no-padding>
+          <button style="color:#ffffff; border:1px solid #ffffff;" ion-button  block outline (click)="checkout()">Checkout</button>
+        </ion-col>
+      </ion-row>
+  
+    </ion-toolbar>
+  </ion-footer>
+

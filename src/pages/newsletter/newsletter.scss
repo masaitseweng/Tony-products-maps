@@ -1,0 +1,27 @@
+page-newsletter {
+
+.header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0 0 0.55px;
+    background: #008e35;
+    /* color: #ffffff; */
+}
+
+.toolbar-title-ios {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #ffffff;
+    pointer-events: auto;
+}
+
+.ion-ios-arrow-back:before {
+    content: "\f3cf";
+    color: #ffffff;
+}
+
+.back-button-text-ios {
+    letter-spacing: -.01em;
+    color: #ffffff;
+}
+
+}

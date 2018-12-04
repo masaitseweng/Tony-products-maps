@@ -1,0 +1,80 @@
+<ion-header #head>
+    <ion-navbar color="fourtwenty">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Home</ion-title>
+  
+      <ion-buttons end>
+        <button ion-button icon-only (click)="openCart()">
+          <ion-icon name="cart"></ion-icon>
+        </button>
+        <ion-badge color="fourtwentylight">{{cart_count}}</ion-badge>
+      </ion-buttons>
+  
+    </ion-navbar>
+    <ion-toolbar color="fourtwenty">
+      <ion-searchbar [showCancelButton]="shouldShowCancel" debounce="100" placeholder="Search a product" animated="true" [(ngModel)]="searchQuery"
+        (search)="onSearch($event)" (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+    </ion-toolbar>
+      <ion-card >
+        <ion-slides >
+          <ion-slide >   
+            <img src="assets/imgs/420-logo.jpg">
+          </ion-slide>    
+        </ion-slides>
+      </ion-card>
+    
+  </ion-header>
+
+<ion-content no-padding  overflow-scroll="true">
+
+
+      <ion-list style="margin-bottom:0;">
+          <ion-item-divider text-center color="fourtwenty">Product</ion-item-divider>
+        </ion-list>
+
+
+        <ion-list *ngFor="let product of product">
+            <ion-item>
+              <ion-thumbnail item-start>
+                  <img [src]="base_url+product.imageUrl" />
+              </ion-thumbnail>
+
+              <!-- <h2>My Neighbor Totoro</h2> -->
+              <h2><span [innerHTML]="product.title"></span></h2>
+              <p><span [innerHTML]="">R{{product.price}}</span></p>
+
+              <button ion-button icon clear item-right>
+
+                  <ion-icon  (click)="viewproduct(product)">
+                    <p style="color: #007957;
+      font-family: sans-serif;">View</p>
+                  </ion-icon>
+  
+                </button> 
+  
+                <button  [disabled]="disabled"  ion-button icon clear item-right >
+                    <ion-icon   (click)="addtocart(product)"><p style="color: #007957;
+      font-family: sans-serif;">Add</p></ion-icon>
+                  </button> 
+
+                  <!-- <button ion-button [disabled]="disabled" (click)="disabled=true">
+                    Click me to disable
+                    </button> -->
+
+            </ion-item>
+          </ion-list>
+
+
+</ion-content>
+
+<style> 
+.slide-zoom {
+  height: 200px !important;
+}
+
+</style>
+
+

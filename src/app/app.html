@@ -1,0 +1,55 @@
+<ion-menu (ionOpen)="myCallback()"  [content]="mycontent" type="overlay">
+
+    
+    
+  
+  <ion-header >
+    <ion-toolbar color="fourtwenty">
+      <ion-title text-center>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="card-background-page">
+
+
+
+
+    <ion-list>
+
+
+
+
+
+      <ion-item (click)="openHomePage()" menuClose >
+        <ion-icon ios="ios-home-outline" md="md-home" item-left large></ion-icon>
+        <h2>Home</h2>  
+      </ion-item>
+
+
+      <ion-item (click)="openlogout()" menuClose >
+        <ion-icon ios="ios-lock" md="md-lock" item-left large></ion-icon>
+        <h2>Logout</h2>    
+      </ion-item>
+
+
+      <ion-list style="margin-bottom:0;">
+        <ion-item-divider text-center color="fourtwenty">Categories</ion-item-divider>
+      </ion-list>
+
+
+      <ion-item *ngFor="let data of categories" (click)="openProduct(data)" menuClose >
+        <ion-icon ios="ios-cart" md="md-cart" item-left large></ion-icon>
+        <h2 color="fourtwenty">{{data.category_name}}</h2>    
+      </ion-item>
+
+    </ion-list>
+
+
+  </ion-content>
+
+</ion-menu>
+ 
+
+<ion-nav [root]="rootPage" #mycontent swipeBackEnabled="false"></ion-nav>
+
+

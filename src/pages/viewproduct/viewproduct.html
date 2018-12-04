@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar color="fourtwenty">
+    <ion-title>{{viewproduct.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+    <ion-card>
+        <img [src]="base_url+viewproduct.imageUrl"/>
+        <ion-card-content>
+          <ion-card-title text-center style="font-weight: bold;
+    color: green;">
+            {{viewproduct.title}}
+            </ion-card-title>
+          <p style="text-align: center;">
+              {{viewproduct.description}}
+          </p>
+          <p style="text-align: center; font-weight: bold;font-size: 30px;">
+             <span [innerHTML]="">R{{viewproduct.price}}</span></p>
+          <p>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
+
+
+  <style type="text/css">
+    .content-md {
+background-image: url(http://rightclickerstesting.co.za/rcm5dane/loginbg.png) !important;
+}
+
+</style>

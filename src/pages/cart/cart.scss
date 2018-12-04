@@ -1,0 +1,30 @@
+page-cart {
+
+    .login-content{
+
+        background: url("../assets/imgs/loginbg.png") no-repeat center center fixed;
+        font-size: bold;
+
+    }
+
+    .compact .item-inner .input-wrapper ion-label {
+        margin: 0 !important;
+    }
+
+    .item-md h3 {
+        margin: 2px 0;
+        font-size: 1.4rem;
+        font-weight: normal;
+        line-height: normal;
+        display: none;
+    }
+
+    .total .button-clear-ios {
+    color: rgb(72, 138, 255);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+
+}

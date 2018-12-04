@@ -1,0 +1,109 @@
+page-login {
+
+  .login-content {
+
+
+     background: url("../assets/imgs/loginbg.png") no-repeat center center fixed;
+    //  height: 100%;
+     box-shadow: 0 0 5px 2px #282a2d;
+
+
+    .img-logo{
+
+      margin-top: 70px;
+
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.471;
+
+      opacity: 1.9;
+      filter: alpha(opacity=50);
+
+
+
+    }
+
+ 
+    .login-box {
+      background: #008757;
+      padding: 20px 20px 0px 20px;
+      margin-top: -8px;
+      opacity: 0.9;
+      filter: alpha(opacity=50);
+    }
+ 
+    ion-row {
+       align-items: center;
+       text-align: center;
+     }
+ 
+     ion-item {
+         border-radius: 3px !important;
+/*         padding-left: 30px !important;*/
+         font-size: 0.9em;
+         margin-bottom: 10px;
+/*         border: 1px solid #ffffff;*/
+         border-bottom: 10px !important;
+         box-shadow: none !important;
+   
+     }
+ 
+     .signup-col {
+       margin: 0px 16px 0px 16px;
+       padding-bottom: 10px;
+     }
+ 
+     .item-inner {
+       border-bottom-color: #ffffff !important;
+       box-shadow: none !important;
+     }
+ 
+     .submit-btn {
+       background: #51CFB1;
+       border-radius: 30px !important;
+       border: 1px solid #ffffff;
+     }
+ 
+     .register-btn {
+       color: #ffffff;
+       font-size: 0.8em;
+     }
+  }   background-color: rgba(0, 0, 0, 0.3);
+
+
+/*  mystuff*/
+
+  .login-content .login-box {
+    background: rgba(0, 0, 0, 0.7) !important;
+    padding: 20px 20px 0px 20px;
+    margin-top: -8px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.item-ios {
+    border-bottom: none !important;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.item-ios.item-label-stacked .text-input, .item-ios.item-label-floating .text-input {
+    border-bottom: 1px solid !important;
+}
+
+.button-ios-danger {
+    color: #fff;
+    background-color: #008e35;
+}
+
+.label-ios-danger, .item-input .label-ios-danger, .item-select .label-ios-danger, .item-datetime .label-ios-danger {
+    color: yellow;
+    font-weight: bold;
+}
+
+.img-logo img {
+  border-radius: 5px 5px 0px 0px;
+}
+
+  }
+
+

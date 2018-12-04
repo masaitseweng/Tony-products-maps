@@ -1,0 +1,40 @@
+
+<ion-header>
+
+  <ion-navbar color="fourtwenty">
+    <ion-title>Location</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+
+
+  
+        <div #map id="map"></div>
+
+
+        
+    <ion-item-divider  color="fourtwenty">
+       Delivery Address
+      </ion-item-divider>
+
+
+           <p padding>
+            <button ion-button block color="fourtwenty"  (click)="Manuallylocation()">Select Location Manually</button>
+          </p>
+
+
+          <ion-card color="fourtwenty">
+            <ion-card-header text-center>
+              Payment Details
+            </ion-card-header>
+            <ion-card-content>
+            <p>Please understand we do not accept card or eft as a payment.</p><br>
+            <p>We ask our clients to please provide cash on delivery</p>
+            </ion-card-content>
+          </ion-card>
+
+
+
+</ion-content>

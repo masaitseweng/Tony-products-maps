@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{product.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+    <ion-card>
+        <img [src]="base_url+product.imageUrl"/>
+        <ion-card-content>
+          <ion-card-title text-center>
+            {{product.title}}
+            </ion-card-title>
+          <p>
+              {{product.description}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
+
+<style>
+  
+  .card-title-md {
+    display: block;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: #222;
+    margin: 2px 0;
+    font-weight: bold;
+    padding: 8px 0;
+}
+</style>
+

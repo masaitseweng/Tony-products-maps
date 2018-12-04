@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-searchbar hideCancelButton="false" [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="dismiss()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list [hidden]="autocompleteItems.length == 0">
+    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+      <p>{{ item.description }}</p>
+    </ion-item>
+    <ion-item>
+      <img src="https://developers.google.com/maps/documentation/places/images/powered-by-google-on-white.png" alt="" />
+    </ion-item>
+  </ion-list>
